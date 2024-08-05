@@ -9,6 +9,7 @@ import { LandingPage } from './Global/GlobalComponents/GlobalPages/StandalonePag
 import { KineticPlatformRouting } from './Global/GlobalComponents/GlobalPages/KineticPlatformPages/KineticPlatformRouting';
 import { Footer } from './Global/GlobalComponents/Footer';
 import { Breadcrumbs } from './Global/GlobalComponents/Widgets/Breadcrumbs';
+import { KineticImpactLeagueRouting } from './KineticImpactLeague/KineticImpactLeagueRouting';
 
 export const App = ({ initialized, loggedIn, loginProps, timedOut }) => {
   // access the global state Context
@@ -48,6 +49,11 @@ export const App = ({ initialized, loggedIn, loginProps, timedOut }) => {
               <Route  
                 path='/kapps/*'
                 element={<KineticPlatformRouting />}
+                exact
+              />
+              <Route
+                path='/kil/*'
+                element={<KineticImpactLeagueRouting />}
                 exact
               />
             </Routes>
